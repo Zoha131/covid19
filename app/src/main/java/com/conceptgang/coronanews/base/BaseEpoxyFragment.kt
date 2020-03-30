@@ -61,6 +61,21 @@ abstract class BaseEpoxyFragment : BaseFragment() {
             insets
         }
 
+        ViewCompat.setOnApplyWindowInsetsListener(baseBinding.bottomNavigation) { _, insets ->
+
+            val toolbarHeight = requireContext().getDimenFromStyleAttr(android.R.attr.actionBarSize) + insets.systemWindowInsetBottom
+
+            baseBinding.bottomNavigation.run {
+                updateLayoutParams<ViewGroup.LayoutParams> {
+                    height = toolbarHeight
+                }
+
+                updatePadding(bottom = insets.systemWindowInsetBottom)
+            }
+
+            insets
+        }
+
         baseBinding.recyclerView.setController(zhViewController)
         baseBinding.recyclerView.addItemDecoration(zhItemDecoration)
 

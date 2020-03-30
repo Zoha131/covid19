@@ -4,4 +4,7 @@
     <color name="colorPrimaryDark">#D5D5D5</color>
     <color name="colorAccent">#D5D5D5</color>
     <color name="window_bg">#121212</color>
+    <color name="zh_dialog_bg">#E6000000</color>
+    <color name="error">#FF3D5D</color>
+    <color name="right">#66BB6A</color>
 </resources>

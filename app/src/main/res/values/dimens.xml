@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="toolbar_material_min_width">50dp</dimen>
+    <dimen name="zh_dialog_margin">20dp</dimen>
 </resources>
