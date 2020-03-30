@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <FrameLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/dialogContainer"
+        android:background="@color/zh_dialog_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/dialogCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginStart="@dimen/zh_dialog_margin"
+            android:layout_marginEnd="@dimen/zh_dialog_margin">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/taalaDialogContainer"
+                android:layout_width="match_parent"
+                android:paddingBottom="37dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/cancelImage"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="14dp"
+                    android:contentDescription="@string/close_button"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_clear" />
+
+
+                <ImageView
+                    android:id="@+id/iconImage"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/question" />
+
+
+                <TextView
+                    android:id="@+id/headerTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textAppearance="@style/TextAppearance.SmartPDFtoolS.Headline6"
+                    app:layout_constraintBottom_toBottomOf="@+id/iconImage"
+                    app:layout_constraintStart_toEndOf="@+id/iconImage"
+                    app:layout_constraintTop_toTopOf="@+id/iconImage"
+                    tools:text="Order Link Copied" />
+
+
+                <TextView
+                    android:id="@+id/messageTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="50dp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textAppearance="@style/TextAppearance.SmartPDFtoolS.Body1"
+                    app:layout_constraintEnd_toStartOf="@+id/cancelImage"
+                    app:layout_constraintStart_toStartOf="@+id/iconImage"
+                    app:layout_constraintTop_toBottomOf="@+id/iconImage"
+                    tools:text="Now you can paste of give this order link to your buyer for payment" />
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/noBtn"
+                    android:layout_width="117dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="18dp"
+                    android:text="NO"
+                    android:textAppearance="@style/TextAppearance.SmartPDFtoolS.Subtitle1"
+                    app:backgroundTint="@color/error"
+                    app:cornerRadius="39dp"
+                    app:layout_constraintStart_toStartOf="@+id/messageTxt"
+                    app:layout_constraintTop_toBottomOf="@+id/messageTxt" />
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/yesBtn"
+                    android:layout_width="117dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="18dp"
+                    android:text="YES"
+                    android:textAppearance="@style/TextAppearance.SmartPDFtoolS.Subtitle1"
+                    app:backgroundTint="@color/excel_to_pdf"
+                    android:layout_marginEnd="45dp"
+                    app:cornerRadius="39dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/messageTxt" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </FrameLayout>

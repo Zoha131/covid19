@@ -51,6 +51,7 @@ rootProject.ext {
             epoxy               : "com.airbnb.android:epoxy:$EPOXY_VERSION",
             epoxy_processor     : "com.airbnb.android:epoxy-processor:$EPOXY_VERSION",
             fragment            : "androidx.fragment:fragment-ktx:$FRAGMENT_VERSION",
+            gson                : "com.google.code.gson:gson:2.8.6",
             kotlin              : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$KOTLIN_VERSION",
             ktx                 : "androidx.core:core-ktx:$ANDROIDX_KTX_VERSION",
             lifecycle_viewmodel : "androidx.lifecycle:lifecycle-viewmodel-ktx:$LIFECYCLE_VERSION",
@@ -66,6 +67,7 @@ rootProject.ext {
             okhttp_interceptor  : "com.squareup.okhttp3:logging-interceptor:$OKHTTP_VERSION",
             retrofit            : "com.squareup.retrofit2:retrofit:$RETROFIT_VERSION",
             retrofit_moshi      : "com.squareup.retrofit2:converter-moshi:$RETROFIT_VERSION",
+            retrofit_gson      : "com.squareup.retrofit2:converter-gson:$RETROFIT_VERSION",
             viewpager2          : "androidx.viewpager2:viewpager2:$VIEWPAGER2_VERSION",
 
             // Test Libraries
