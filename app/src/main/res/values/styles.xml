@@ -6,6 +6,68 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/window_bg</item>
+    </style>
+
+    <style name="AppTheme.Splash">
+        <item name="android:windowBackground">@drawable/window_bg</item>
+    </style>
+
+
+
+    <style name="TextAppearance.CoronaNews.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="fontFamily">@font/nunito_extra_bold</item>
+    </style>
+
+    <style name="TextAppearance.CoronaNews.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/nunito_extra_bold</item>
+    </style>
+
+    <style name="TextAppearance.CoronaNews.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/nunito_extra_bold</item>
+    </style>
+
+    <style name="TextAppearance.CoronaNews.EditTitle" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/nunito_semi_bold</item>
+    </style>
+
+    <style name="TextAppearance.CoronaNews.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/nunito_semi_bold</item>
+    </style>
+
+    <style name="TextAppearance.CoronaNews.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="fontFamily">@font/nunito_semi_bold</item>
+    </style>
+
+    <style name="TextAppearance.CoronaNews.Completed" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="fontFamily">@font/nunito_semi_bold_italic</item>
+    </style>
+
+    <style name="TextAppearance.CoronaNews.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/nunito_semi_bold</item>
+    </style>
+    <style name="TextAppearance.CoronaNews.Caption.Light" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/nunito_regular</item>
+    </style>
+
+    <style name="TextAppearance.CoronaNews.BottomButton" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/nunito_extra_bold</item>
+    </style>
+
+    <style name="TextAppearance.CoronaNews.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/nunito_regular</item>
+    </style>
+
+    <style name="TextAppearance.CoronaNews.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="fontFamily">@font/nunito_regular</item>
+    </style>
+
+    <style name="TextAppearance.CoronaNews.ExpandTitle" parent="TextAppearance.CoronaNews.Headline4">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextAppearance.CoronaNews.CollapsTitle" parent="TextAppearance.CoronaNews.Headline5">
+        <item name="android:textColor">@android:color/white</item>
     </style>
 
 </resources>

@@ -49,7 +49,7 @@ dependencies {
     //implementation libs.dagger
     //kapt libs.dagger_compiler
     implementation libs.epoxy
-    kapt           libs.epoxy_processor
+    kapt libs.epoxy_processor
     implementation libs.fragment
     implementation libs.kotlin
     implementation libs.ktx
