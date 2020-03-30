@@ -1,0 +1,79 @@
+rootProject.ext.JAVA_SOURCE_VERSION = JavaVersion.VERSION_1_8
+rootProject.ext.JAVA_TARGET_VERSION = JavaVersion.VERSION_1_8
+
+rootProject.ext {
+
+    APPLICATION_ID = "com.conceptgang.coronanews"
+    APP_VERSION = "1.0.0"
+    APP_VERSION_CODE = 100
+
+    TARGET_SDK_VERSION = 29
+    COMPILE_SDK_VERSION = 29
+    BUILD_TOOL_VERSION = "29.0.2"
+    MIN_SDK_VERSION = 21
+
+    // Keep these alphabetized
+    ACTIVITY_VERSION = "1.1.0"
+    ANDROIDX_APPCOMPAT_VERSION = '1.1.0'
+    ANDROIDX_CONSTRAINTLAYOUT_VERSION = '2.0.0-beta4'
+    ANDROIDX_ESPRESSO_VERSION = '3.2.0'
+    ANDROIDX_KTX_VERSION = '1.2.0'
+    COIL_VERSION = '0.9.5'
+    COROUTINE_VERSION  = "1.3.5"
+    DAGGER_VERSION = '2.27'
+    EPOXY_VERSION = '3.9.0'
+    FRAGMENT_VERSION = "1.2.3"
+    JUNIT_VERSION = '4.12'
+    KOTLIN_TEST_VERSION = '2.0.7'
+    LIFECYCLE_VERSION = "2.2.0"
+    LOTTIE_VERSION = "3.4.0"
+    MATERIAL_VERSION = '1.1.0'
+    MOCKITO_VERSION = '2.23.0'
+    MOSHI_VERSION = '1.9.2'
+    MVRX_VERSION = '1.4.0'
+    NAV_VERSION = "2.2.1"
+    OKHTTP_VERSION = '4.4.1'
+    RETROFIT_VERSION = '2.8.1'
+    ROBOLECTRIC_VERSION = '3.8'
+    TESTING_COMPILE_VERSION = '0.15'
+    VIEWPAGER2_VERSION = '1.0.0'
+
+    libs = [
+            activity            : "androidx.activity:activity-ktx:$ACTIVITY_VERSION",
+            appcompat           : "androidx.appcompat:appcompat:$ANDROIDX_APPCOMPAT_VERSION",
+            coil                : "io.coil-kt:coil:$COIL_VERSION",
+            constraintLayout    : "androidx.constraintlayout:constraintlayout:$ANDROIDX_CONSTRAINTLAYOUT_VERSION",
+            coroutine           : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$COROUTINE_VERSION",
+            coroutine_android   : "org.jetbrains.kotlinx:kotlinx-coroutines-android:$COROUTINE_VERSION",
+            coroutine_rx2       : "org.jetbrains.kotlinx:kotlinx-coroutines-rx2:$COROUTINE_VERSION",
+            dagger              : "com.google.dagger:dagger:$DAGGER_VERSION",
+            dagger_compiler     : "com.google.dagger:dagger-compiler:$DAGGER_VERSION",
+            epoxy               : "com.airbnb.android:epoxy:$EPOXY_VERSION",
+            epoxy_processor     : "com.airbnb.android:epoxy-processor:$EPOXY_VERSION",
+            fragment            : "androidx.fragment:fragment-ktx:$FRAGMENT_VERSION",
+            kotlin              : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$KOTLIN_VERSION",
+            ktx                 : "androidx.core:core-ktx:$ANDROIDX_KTX_VERSION",
+            lifecycle_viewmodel : "androidx.lifecycle:lifecycle-viewmodel-ktx:$LIFECYCLE_VERSION",
+            lifecycle_runtime   : "androidx.lifecycle:lifecycle-runtime-ktx:$LIFECYCLE_VERSION",
+            lifecycle_livedata  : "androidx.lifecycle:lifecycle-livedata-ktx:$LIFECYCLE_VERSION",
+            lottie              : "com.airbnb.android:lottie:$LOTTIE_VERSION",
+            material            : "com.google.android.material:material:$MATERIAL_VERSION",
+            moshi               : "com.squareup.moshi:moshi:$MOSHI_VERSION",
+            mvrx                : "com.airbnb.android:mvrx:$MVRX_VERSION",
+            navigation          : "androidx.navigation:navigation-fragment-ktx:$NAV_VERSION",
+            navigation_ui       : "androidx.navigation:navigation-ui-ktx:$NAV_VERSION",
+            okhttp              : "com.squareup.okhttp3:okhttp:$OKHTTP_VERSION",
+            okhttp_interceptor  : "com.squareup.okhttp3:logging-interceptor:$OKHTTP_VERSION",
+            retrofit            : "com.squareup.retrofit2:retrofit:$RETROFIT_VERSION",
+            retrofit_moshi      : "com.squareup.retrofit2:converter-moshi:$RETROFIT_VERSION",
+            viewpager2          : "androidx.viewpager2:viewpager2:$VIEWPAGER2_VERSION",
+
+            // Test Libraries
+            espresso            : "androidx.test.espresso:espresso-core:$ANDROIDX_ESPRESSO_VERSION",
+            fragment_test       : "androidx.fragment:fragment-testing:$FRAGMENT_VERSION",
+            junit               : "junit:junit:$JUNIT_VERSION",
+            junitx              : 'androidx.test.ext:junit:1.1.1',
+            okhttp_test         : "com.squareup.okhttp3:mockwebserver:$OKHTTP_VERSION",
+            robolectric         : "org.robolectric:robolectric:$ROBOLECTRIC_VERSION",
+    ]
+}

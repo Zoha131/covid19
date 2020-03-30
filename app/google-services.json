@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "468809954526",
+    "firebase_url": "https://corona-news-dd99d.firebaseio.com",
+    "project_id": "corona-news-dd99d",
+    "storage_bucket": "corona-news-dd99d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:468809954526:android:9367a74eb63db5cbadbe4f",
+        "android_client_info": {
+          "package_name": "com.conceptgang.coronanews"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "468809954526-mdhps8bp1oo4e5f99eg44psmi93httph.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUpY8lr558J-rKdSdPAiWHoSz8wtyLGM4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "468809954526-mdhps8bp1oo4e5f99eg44psmi93httph.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
