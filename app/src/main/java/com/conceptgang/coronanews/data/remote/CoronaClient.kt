@@ -6,6 +6,6 @@ import retrofit2.http.GET
 
 interface CoronaClient {
 
-    @GET("cuurentstat/")
-    suspend fun getCountryData():CoronaClientResult<CountryData>
+    @GET("cuurentstat/?search=Total")
+    suspend fun getWorldData():CoronaClientResult<CountryData>
 }

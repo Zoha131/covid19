@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <FrameLayout
+        android:id="@+id/btn_start_layout"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/world_btn_height"
+        android:background="@drawable/left_active"
+        app:layout_constraintEnd_toStartOf="@+id/btn_end_layout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/btn_start"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/today"
+            android:textAppearance="@style/TextAppearance.CoronaNews.WorldTitle"
+            android:textColor="@color/textAccent" />
+
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/btn_end_layout"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/world_btn_height"
+        android:background="@drawable/right_inactive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_start_layout"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/btn_end"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/total"
+            android:textAppearance="@style/TextAppearance.CoronaNews.WorldTitle"
+            android:textColor="@color/textPrimary" />
+
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/large_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="@string/currently_infected_patients"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.CoronaNews.WorldTitle"
+        android:textColor="@color/textPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_end_layout" />
+
+    <TextView
+        android:id="@+id/largeNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="555,532,434"
+        android:textAppearance="@style/TextAppearance.CoronaNews.worldTotalNum"
+        android:textColor="@color/txtWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/large_title" />
+
+    <TextView
+        android:id="@+id/start_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/deaths"
+        android:textAppearance="@style/TextAppearance.CoronaNews.WorldSubTitle"
+        android:textColor="@color/textPrimary"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/largeNumber" />
+
+    <TextView
+        android:id="@+id/end_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recovered"
+        android:textAppearance="@style/TextAppearance.CoronaNews.WorldSubTitle"
+        android:textColor="@color/textPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/start_title" />
+
+    <TextView
+        android:id="@+id/start_digit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/wold_margin_bottom"
+        android:text="532,434"
+        android:textAppearance="@style/TextAppearance.CoronaNews.WorldSubNumber"
+        android:textColor="@color/deathColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/start_title"
+        app:layout_constraintStart_toStartOf="@+id/start_title"
+        app:layout_constraintTop_toBottomOf="@+id/start_title" />
+
+    <TextView
+        android:id="@+id/end_digit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="532345434"
+        android:textAppearance="@style/TextAppearance.CoronaNews.WorldSubNumber"
+        android:textColor="@color/recoveredColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/end_title"
+        app:layout_constraintStart_toStartOf="@+id/end_title"
+        app:layout_constraintTop_toBottomOf="@+id/end_title" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="1dp"
+        android:layout_height="52dp"
+        android:background="#DFDFDF"
+        app:layout_constraintBottom_toBottomOf="@+id/start_digit"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/start_title"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5"
+        tools:visibility="visible" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

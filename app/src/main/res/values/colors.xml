@@ -7,4 +7,10 @@
     <color name="zh_dialog_bg">#E6000000</color>
     <color name="error">#FF3D5D</color>
     <color name="right">#66BB6A</color>
+
+    <color name="textPrimary">#D5D5D5</color>
+    <color name="textAccent">#121212</color>
+    <color name="txtWhite">#FFFFFF</color>
+    <color name="deathColor">#E90B18</color>
+    <color name="recoveredColor">#6EA91E</color>
 </resources>

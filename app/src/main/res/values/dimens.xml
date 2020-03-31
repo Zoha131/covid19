@@ -2,4 +2,8 @@
 <resources>
     <dimen name="toolbar_material_min_width">50dp</dimen>
     <dimen name="zh_dialog_margin">20dp</dimen>
+    <dimen name="world_radius">16dp</dimen>
+    <dimen name="world_stroke">1.5dp</dimen>
+    <dimen name="world_btn_height">40dp</dimen>
+    <dimen name="wold_margin_bottom">16dp</dimen>
 </resources>

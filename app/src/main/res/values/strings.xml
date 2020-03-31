@@ -1,11 +1,24 @@
 <resources>
-    <string name="app_name">Corona News</string>
+    <string name="app_name">COVID-19\nCoronavirus Update</string>
+    <string name="app_name_short">COVID-19</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="close_button">Close Button</string>
     <string name="home">Home</string>
     <string name="all_country">All Country</string>
     <string name="news">News</string>
     <string name="more">More</string>
+    <string name="today">Today</string>
+    <string name="total">Total</string>
+    <string name="deaths">Deaths</string>
+    <string name="recovered">Recovered</string>
+    <string name="currently_infected_patients">Currently Infected Patients</string>
+    <string name="active">Active Cases</string>
+    <string name="closed">Closed Cases</string>
+    <string name="critical">Critical Cases</string>
+    <string name="mild">Mild Cases</string>
+    <string name="cases_outcome">Cases which had an outcome</string>
+    <string name="corona_cases">Total Coronavirus Cases</string>
+    <string name="corona_cases_today">New Coronavirus Cases</string>
+    <string name="opps">Opps...</string>
+    <string name="somethingWrong">Something went wrong. Please make sure you have working network connection.</string>
 </resources>

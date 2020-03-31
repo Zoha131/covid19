@@ -1,19 +1,17 @@
 package com.conceptgang.coronanews.ui.repository
 
 import com.conceptgang.coronanews.data.remote.CoronaClient
-import timber.log.Timber
+import com.conceptgang.coronanews.model.CountryData
 
 class CoronaRepository (
     private val client: CoronaClient
 ) {
 
 
-    suspend fun update(){
-        val result = client.getCountryData()
+    suspend fun getWorldData(): CountryData{
+        val result = client.getWorldData()
 
-
-        Timber.tag("CoronaData").d("${result}")
-
+        return result.results[0]
     }
 
 

@@ -14,6 +14,7 @@ import com.conceptgang.coronanews.component.view.ZHViewCallback
 import com.conceptgang.coronanews.component.view.ZHViewData
 import com.conceptgang.coronanews.databinding.FragmentEpoxyBaseBinding
 import com.conceptgang.coronanews.utils.getDimenFromStyleAttr
+import com.conceptgang.coronanews.utils.px
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetBehavior.BottomSheetCallback
 
@@ -55,7 +56,7 @@ abstract class BaseEpoxyFragment : BaseFragment() {
                     height = toolbarHeight
                 }
 
-                updatePadding(top = insets.systemWindowInsetTop)
+                updatePadding(top = insets.systemWindowInsetTop )
             }
 
             insets
@@ -64,13 +65,16 @@ abstract class BaseEpoxyFragment : BaseFragment() {
         ViewCompat.setOnApplyWindowInsetsListener(baseBinding.bottomNavigation) { _, insets ->
 
             val toolbarHeight = requireContext().getDimenFromStyleAttr(android.R.attr.actionBarSize) + insets.systemWindowInsetBottom
-
             baseBinding.bottomNavigation.run {
                 updateLayoutParams<ViewGroup.LayoutParams> {
                     height = toolbarHeight
                 }
 
                 updatePadding(bottom = insets.systemWindowInsetBottom)
+            }
+
+            baseBinding.recyclerView.run {
+                updatePadding(bottom = toolbarHeight)
             }
 
             insets

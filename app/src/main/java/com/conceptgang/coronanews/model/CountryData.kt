@@ -18,7 +18,6 @@ package com.conceptgang.coronanews.model
 */
 
 data class CountryData(
-    val id: Int,
     val country: String,
     val cases: Int,
     val todayCases: Int,
@@ -29,4 +28,11 @@ data class CountryData(
     val critical: Int,
     val casesPerOneMillion: Double,
     val deathsPerOneMillion: Double
-)
+) {
+
+    companion object{
+        val World = "Total"
+    }
+}
+
+

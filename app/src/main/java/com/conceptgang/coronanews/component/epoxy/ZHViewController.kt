@@ -1,8 +1,8 @@
 package com.conceptgang.coronanews.component.epoxy
 
 import com.airbnb.epoxy.TypedEpoxyController
-import com.conceptgang.coronanews.component.view.ZHViewCallback
-import com.conceptgang.coronanews.component.view.ZHViewData
+import com.conceptgang.coronanews.component.view.*
+import com.conceptgang.coronanews.utils.exhaustive
 
 class ZHViewController(
 
@@ -13,12 +13,24 @@ class ZHViewController(
 
         data.forEachIndexed { index, zhViewData ->
 
-//            when(zhViewData){
-//
-//
-//
-//
-//            }.exhaustive
+            when(zhViewData){
+
+                is WorldViewData -> {
+
+                    worldView {
+                        id("world $index")
+                        zhViewData(zhViewData)
+                        zhViewCallback(callback)
+                    }
+                }
+
+                is WorldShimmerData -> {
+                    worldShimmer {
+                        id("Shimmer $index")
+                    }
+                }
+
+            }.exhaustive
 
         }
 

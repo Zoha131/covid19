@@ -181,3 +181,37 @@ fun TextView.zhTextAppearance(@StyleRes textAppearance: Int){
         setTextAppearance(context, textAppearance)
     }
 }
+
+
+fun String.toHumanFriendly(): String {
+
+    val array = this.split(".")
+    var purno = array[0]
+
+    val result = StringBuilder()
+
+    if (purno.isNotEmpty()) result.insert(0,purno.takeLast(3))
+    else result.append("0")
+    purno = purno.dropLast(3)
+
+    if (purno.isNotEmpty()) result.insert(0,",").insert(0,purno.takeLast(3))
+    purno = purno.dropLast(3)
+
+    if (purno.isNotEmpty()) result.insert(0,",").insert(0,purno.takeLast(3))
+    purno = purno.dropLast(3)
+
+    if (purno.isNotEmpty()) result.insert(0,",").insert(0,purno.takeLast(3))
+    purno = purno.dropLast(3)
+
+    if (purno.isNotEmpty()) result.insert(0,purno)
+
+    if(array.size > 1 && array[1].isNotEmpty()){
+        val numValue = array[1].toInt()
+
+        if (numValue > 0) result.append(".").append(numValue)
+    }
+
+
+    return result.toString()
+
+}
