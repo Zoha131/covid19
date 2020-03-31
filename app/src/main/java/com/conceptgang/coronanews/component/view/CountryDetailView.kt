@@ -10,6 +10,7 @@ import com.airbnb.epoxy.ModelProp
 import com.airbnb.epoxy.ModelView
 import com.conceptgang.coronanews.R
 import com.conceptgang.coronanews.databinding.ViewCountryBinding
+import com.conceptgang.coronanews.databinding.ViewCountryExpandedBinding
 import com.conceptgang.coronanews.utils.toHumanFriendly
 import com.google.android.material.card.MaterialCardView
 
@@ -34,7 +35,7 @@ class CountryDetailView: MaterialCardView {
 
 
     @ModelProp
-    lateinit var zhViewData: CountryViewData
+    lateinit var zhViewData: CountryDetailViewData
 
     private val data get() = zhViewData.data
 
@@ -47,12 +48,12 @@ class CountryDetailView: MaterialCardView {
     @Nullable
     var zhViewCallback: ZHViewCallback? = null
 
-    private lateinit var binding: ViewCountryBinding
+    private lateinit var binding: ViewCountryExpandedBinding
 
     private fun init(attr: AttributeSet?) {
         val inflater = LayoutInflater.from(context)
 
-        binding = ViewCountryBinding.inflate(inflater, this, true)
+        binding = ViewCountryExpandedBinding.inflate(inflater, this, true)
 
         radius = resources.getDimensionPixelSize(R.dimen.world_radius).toFloat()
         cardElevation = 6.toFloat()
@@ -61,8 +62,15 @@ class CountryDetailView: MaterialCardView {
 
     @AfterPropsSet
     fun setup(){
-        binding.countryName.text = data.country
-        binding.totalDigit.text = "${data.cases}".toHumanFriendly()
+        binding.nameCountry.text = data.country
+        binding.totalCaseDigit.text = "${data.cases}".toHumanFriendly()
+        binding.todayCasesDigit.text = "${data.todayCases}".toHumanFriendly()
         binding.deathDigit.text = "${data.deaths}".toHumanFriendly()
+        binding.todayDeathsDigit.text = "${data.todayDeaths}".toHumanFriendly()
+        binding.recoverDigit.text = "${data.recovered}".toHumanFriendly()
+        binding.activeCaseDigit.text = "${data.active}".toHumanFriendly()
+        binding.criticalCaseDigit.text = "${data.critical}".toHumanFriendly()
+        binding.caseMillionDigit.text = "${data.casesPerOneMillion}".toHumanFriendly()
+        binding.deathMillionDigit.text = "${data.deathsPerOneMillion}".toHumanFriendly()
     }
 }

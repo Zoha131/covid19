@@ -50,7 +50,7 @@
         android:id="@+id/total_case_digit"
         style="@style/Style.CoronaComponent.CountryView.Expanded.Digit"
         android:layout_marginEnd="24dp"
-        android:textAppearance="@style/TextAppearance.CoronaNews.EditTitle"
+        android:textAppearance="@style/TextAppearance.CoronaNews.ExpandHighLite"
         android:textColor="@color/totalColor"
         app:layout_constraintBottom_toBottomOf="@+id/total_case"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,7 +97,7 @@
     <TextView
         android:id="@+id/death_digit"
         style="@style/Style.CoronaComponent.CountryView.Expanded.Digit"
-        android:textAppearance="@style/TextAppearance.CoronaNews.EditTitle"
+        android:textAppearance="@style/TextAppearance.CoronaNews.ExpandHighLite"
         android:textColor="@color/deathColor"
         app:layout_constraintBottom_toBottomOf="@+id/death"
         app:layout_constraintEnd_toEndOf="@+id/total_case_digit"
@@ -144,7 +144,7 @@
     <TextView
         android:id="@+id/recover_digit"
         style="@style/Style.CoronaComponent.CountryView.Expanded.Digit"
-        android:textAppearance="@style/TextAppearance.CoronaNews.EditTitle"
+        android:textAppearance="@style/TextAppearance.CoronaNews.ExpandHighLite"
         android:textColor="@color/recoveredColor"
         app:layout_constraintBottom_toBottomOf="@+id/recover"
         app:layout_constraintEnd_toEndOf="@+id/total_case_digit"

@@ -53,7 +53,7 @@ class CountryViewModel(state: CountryState, val repository: CoronaRepository) : 
 
                 rawData = repository.getCountryData()
 
-                val mViews = rawData.map { CountryViewData(it, CountryViewType.Collapsed) }
+                val mViews = rawData.map { CountryDetailViewData(it) }
 
                 setState {
                     copy(
@@ -78,7 +78,7 @@ class CountryViewModel(state: CountryState, val repository: CoronaRepository) : 
 
     fun searchByCountryName(key: CharSequence){
         val searchResult = rawData.filter { it.country.contains(key, true) }
-        val searchViews = searchResult.map { CountryViewData(it, CountryViewType.Collapsed) }
+        val searchViews = searchResult.map { CountryViewData(it) }
 
         setState { copy(views = searchViews) }
     }

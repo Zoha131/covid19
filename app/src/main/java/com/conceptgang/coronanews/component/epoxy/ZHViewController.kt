@@ -43,6 +43,14 @@ class ZHViewController(
                     }
                 }
 
+                is CountryDetailViewData -> {
+                    countryDetailView {
+                        id("country detail $index")
+                        zhViewData(zhViewData)
+                        zhViewCallback(callback)
+                    }
+                }
+
             }.exhaustive
 
         }

@@ -17,11 +17,6 @@ import com.conceptgang.coronanews.model.CountryData
 import com.conceptgang.coronanews.utils.toHumanFriendly
 import com.google.android.material.card.MaterialCardView
 
-sealed class CountryViewType{
-    object Collapsed: CountryViewType()
-    object Expanded: CountryViewType()
-}
-
 @ModelView(autoLayout = ModelView.Size.MATCH_WIDTH_WRAP_HEIGHT)
 class CountryView: MaterialCardView {
 

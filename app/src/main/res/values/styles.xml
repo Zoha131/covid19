@@ -88,20 +88,24 @@
         <item name="fontFamily">@font/nunito_bold</item>
     </style>
 
+    <style name="TextAppearance.CoronaNews.ExpandHighLite" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/nunito_bold</item>
+    </style>
+
 
     <style name="Style.CoronaComponent.CountryView.Expanded.Label" parent="">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">@dimen/country_expand_unit_vertical_margin</item>
         <item name="android:textColor">@color/textPrimary</item>
-        <item name="android:textAppearance">@style/TextAppearance.CoronaNews.WorldTitle</item>
+        <item name="android:textAppearance">@style/TextAppearance.CoronaNews.WorldSubTitle</item>
     </style>
 
     <style name="Style.CoronaComponent.CountryView.Expanded.Digit" parent="">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/txtWhite</item>
-        <item name="android:textAppearance">@style/TextAppearance.CoronaNews.WorldSubTitle</item>
+        <item name="android:textAppearance">@style/TextAppearance.CoronaNews.WorldTitle</item>
     </style>
 
     <style name="Style.CoronaComponent.CountryView.Expanded.Divider" parent="">
