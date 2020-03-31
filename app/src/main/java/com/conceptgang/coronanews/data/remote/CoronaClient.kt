@@ -8,4 +8,8 @@ interface CoronaClient {
 
     @GET("cuurentstat/?search=Total")
     suspend fun getWorldData():CoronaClientResult<CountryData>
+
+
+    @GET("cuurentstat/")
+    suspend fun getCountryData():CoronaClientResult<CountryData>
 }

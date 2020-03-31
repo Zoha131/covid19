@@ -21,4 +21,5 @@
     <string name="corona_cases_today">New Coronavirus Cases</string>
     <string name="opps">Opps...</string>
     <string name="somethingWrong">Something went wrong. Please make sure you have working network connection.</string>
+    <string name="search">Search by country name</string>
 </resources>

@@ -16,7 +16,6 @@ class ZHViewController(
             when(zhViewData){
 
                 is WorldViewData -> {
-
                     worldView {
                         id("world $index")
                         zhViewData(zhViewData)
@@ -26,6 +25,20 @@ class ZHViewController(
 
                 is WorldShimmerData -> {
                     worldShimmer {
+                        id("Shimmer $index")
+                    }
+                }
+
+                is CountryViewData -> {
+                    countryView {
+                        id("country $index")
+                        zhViewData(zhViewData)
+                        zhViewCallback(callback)
+                    }
+                }
+
+                is CountryShimmerData -> {
+                    countryShimmer {
                         id("Shimmer $index")
                     }
                 }

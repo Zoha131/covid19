@@ -32,11 +32,14 @@ class HomeViewModel(state: HomeState, val repository: CoronaRepository) :
         }
     }
 
-
     fun update() {
 
         setState {
             copy(
+                views = listOf(
+                    WorldShimmerData,
+                    WorldShimmerData
+                ),
                 isLoading = Loading()
             )
         }
@@ -69,18 +72,6 @@ class HomeViewModel(state: HomeState, val repository: CoronaRepository) :
 
         }
 
-    }
-
-    fun getViews() {
-        setState {
-            copy(
-                views = listOf(
-                    WorldShimmerData,
-                    WorldShimmerData
-                ),
-                isLoading = Loading()
-            )
-        }
     }
 
 

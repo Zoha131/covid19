@@ -15,4 +15,14 @@ class CoronaRepository (
     }
 
 
+    suspend fun getCountryData(): List<CountryData> {
+        val result = client.getCountryData()
+
+        return result.results
+    }
+
+
+
+
+
 }

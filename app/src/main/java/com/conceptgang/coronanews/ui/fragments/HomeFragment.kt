@@ -19,57 +19,21 @@ import com.conceptgang.coronanews.ui.dialog.ZHDialogType
 
 class HomeFragment : BaseEpoxyFragment() {
 
+    override val bottomNavId: Int = R.id.navigation_home
     override val zhViewCallback: ZHViewCallback = { i, zhViewData ->
 
     }
 
 
-    private val viewModel by activityViewModel (HomeViewModel::class)
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        baseBinding.endLayout.setOnClickListener {
-            viewModel.update()
-        }
-
-        baseBinding.bottomNavigation.setOnNavigationItemSelectedListener { item: MenuItem ->
-            when(item.itemId){
-                R.id.home -> {
-                    true
-                }
-                else -> {
-                    Toast.makeText(requireContext(), "This feature is under development", Toast.LENGTH_SHORT).show()
-                    false
-                }
-            }
-
-        }
-    }
-
-    override fun invalidate() = withState(viewModel) { homeState ->
+    override fun invalidate() = withState(homeViewModel) { homeState ->
 
         when (homeState.isLoading) {
             is Loading -> {
                 setEpoxyData(homeState.views)
-
-                val rotate = RotateAnimation(
-                    11*360f,
-                    0f,
-                    Animation.RELATIVE_TO_SELF,
-                    0.5f,
-                    Animation.RELATIVE_TO_SELF,
-                    0.5f
-                )
-                rotate.duration = 33000
-                rotate.setInterpolator(LinearInterpolator())
-
-                baseBinding.endIcon.startAnimation(rotate)
-
+                rotateTopIcon()
             }
             is Uninitialized -> {
-                viewModel.getViews()
-                viewModel.update()
+                download()
             }
             is Success -> {
                 setEpoxyData(homeState.views)

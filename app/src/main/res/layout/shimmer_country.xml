@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:id="@+id/yellow_circle"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:src="@drawable/circle_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline_total"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/red_circle"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:src="@drawable/circle_white"
+            app:layout_constraintBottom_toBottomOf="@+id/total_digit"
+            app:layout_constraintStart_toStartOf="@+id/guideline_death"
+            app:layout_constraintTop_toTopOf="@+id/total_digit"
+            app:layout_constraintVertical_bias="0.454" />
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/contxt_menu" />
+
+        <View
+            android:id="@+id/country_name"
+            android:layout_width="80dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="@color/textPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_total"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Bosnia and Herzegovina bangladesh" />
+
+        <View
+            android:id="@+id/total_digit"
+            android:layout_width="60dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="4dp"
+            android:background="@color/textPrimary"
+            app:layout_constraintBottom_toBottomOf="@+id/yellow_circle"
+            app:layout_constraintStart_toEndOf="@+id/yellow_circle"
+            app:layout_constraintTop_toTopOf="@+id/yellow_circle"
+            tools:text="345,455,345" />
+
+        <View
+            android:id="@+id/death_digit"
+            android:layout_width="60dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="4dp"
+            android:background="@color/textPrimary"
+            app:layout_constraintBottom_toBottomOf="@+id/red_circle"
+            app:layout_constraintStart_toEndOf="@+id/red_circle"
+            app:layout_constraintTop_toTopOf="@+id/red_circle"
+            tools:text="345,455,345" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".40" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_death"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".70" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.facebook.shimmer.ShimmerFrameLayout>

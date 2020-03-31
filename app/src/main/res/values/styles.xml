@@ -84,4 +84,8 @@
         <item name="fontFamily">@font/nunito_bold</item>
     </style>
 
+    <style name="TextAppearance.CoronaNews.CountryCollapse" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="fontFamily">@font/nunito_bold</item>
+    </style>
+
 </resources>

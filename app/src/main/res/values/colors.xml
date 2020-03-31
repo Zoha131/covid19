@@ -13,4 +13,7 @@
     <color name="txtWhite">#FFFFFF</color>
     <color name="deathColor">#E90B18</color>
     <color name="recoveredColor">#6EA91E</color>
+    <color name="totalColor">#FFCA28</color>
+
+    <color name="txtGrey">#6B6B6B</color>
 </resources>

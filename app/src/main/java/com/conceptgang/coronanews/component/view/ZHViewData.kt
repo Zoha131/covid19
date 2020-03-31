@@ -52,3 +52,17 @@ object WorldShimmerData: ZHViewData() {
     override val epoxyData: EpoxyData = EpoxyData.MEDIUM
 }
 
+data class CountryViewData(
+    val data: CountryData,
+    val type: CountryViewType,
+    override val tag: String = "",
+    override val isDarkMode: Boolean = true,
+    override val epoxyData: EpoxyData = EpoxyData.MEDIUM
+): ZHViewData()
+
+object CountryShimmerData: ZHViewData() {
+    override val tag: String = "Shimmer"
+    override val isDarkMode: Boolean = true
+    override val epoxyData: EpoxyData = EpoxyData.MEDIUM
+}
+
