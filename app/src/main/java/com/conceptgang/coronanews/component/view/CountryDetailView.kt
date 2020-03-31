@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.annotation.Nullable
+import androidx.core.content.ContextCompat
 import com.airbnb.epoxy.AfterPropsSet
 import com.airbnb.epoxy.CallbackProp
 import com.airbnb.epoxy.ModelProp
@@ -12,6 +13,10 @@ import com.conceptgang.coronanews.R
 import com.conceptgang.coronanews.databinding.ViewCountryBinding
 import com.conceptgang.coronanews.databinding.ViewCountryExpandedBinding
 import com.conceptgang.coronanews.utils.toHumanFriendly
+import com.github.mikephil.charting.data.Entry
+import com.github.mikephil.charting.data.LineData
+import com.github.mikephil.charting.data.LineDataSet
+import com.github.mikephil.charting.utils.EntryXComparator
 import com.google.android.material.card.MaterialCardView
 
 @ModelView(autoLayout = ModelView.Size.MATCH_WIDTH_WRAP_HEIGHT)
@@ -38,6 +43,7 @@ class CountryDetailView: MaterialCardView {
     lateinit var zhViewData: CountryDetailViewData
 
     private val data get() = zhViewData.data
+    private val historyData get() = zhViewData.history
 
     @ModelProp
     @JvmField
@@ -72,5 +78,18 @@ class CountryDetailView: MaterialCardView {
         binding.criticalCaseDigit.text = "${data.critical}".toHumanFriendly()
         binding.caseMillionDigit.text = "${data.casesPerOneMillion}".toHumanFriendly()
         binding.deathMillionDigit.text = "${data.deathsPerOneMillion}".toHumanFriendly()
+
+
+        val entries = historyData.values.mapIndexed { index, i ->   Entry(index.toFloat(), i.toFloat() )}
+        val dataSet = LineDataSet(entries, "History")
+        dataSet.setColor(ContextCompat.getColor(context, R.color.deathColor))
+
+        val lineData = LineData(dataSet)
+        binding.chart.data = lineData
+        binding.chart.invalidate()
+
+        binding.chart.description.isEnabled = false
+
+
     }
 }

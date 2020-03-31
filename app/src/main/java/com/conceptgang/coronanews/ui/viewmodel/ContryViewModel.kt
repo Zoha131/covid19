@@ -7,7 +7,9 @@ import com.conceptgang.coronanews.base.BaseViewModel
 import com.conceptgang.coronanews.component.view.*
 import com.conceptgang.coronanews.model.CountryData
 import com.conceptgang.coronanews.ui.repository.CoronaRepository
+import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
+import timber.log.Timber
 
 data class CountryState(
     val views: List<ZHViewData> = emptyList(),
@@ -29,6 +31,7 @@ class CountryViewModel(state: CountryState, val repository: CoronaRepository) : 
     }
 
     private var rawData: List<CountryData> = emptyList()
+    private var rawHistory:  Map<String, Map<String, Int>> = emptyMap()
 
     fun update() {
 
@@ -51,13 +54,17 @@ class CountryViewModel(state: CountryState, val repository: CoronaRepository) : 
 
             try {
 
-                rawData = repository.getCountryData()
+                val countryData = async { repository.getCountryData() }
+                val historyData = async { repository.getHistoryData() }
 
-                val mViews = rawData.map { CountryDetailViewData(it) }
+
+                rawData = countryData.await()
+                rawHistory = historyData.await()
+
 
                 setState {
                     copy(
-                        views = mViews,
+                        views = getDetailViews(rawData),
                         isLoading = Success(true)
                     )
                 }
@@ -70,9 +77,27 @@ class CountryViewModel(state: CountryState, val repository: CoronaRepository) : 
                     )
                 }
 
+                Timber.tag("HISTORYDATA").d("${ex.message}")
+
             }
 
         }
+
+    }
+
+    fun getDetailViews(countryData: List<CountryData>) = countryData.map {entryData ->
+
+
+        val map = if(entryData.country.contains("bosnia", true)){
+
+            rawHistory.get("bosnia")
+        } else{
+            rawHistory.get(entryData.country.toLowerCase())
+
+        }
+
+        CountryDetailViewData(entryData, map?: emptyMap())
+
 
     }
 
@@ -80,7 +105,7 @@ class CountryViewModel(state: CountryState, val repository: CoronaRepository) : 
         val searchResult = rawData.filter { it.country.contains(key, true) }
         val searchViews = searchResult.map { CountryViewData(it) }
 
-        setState { copy(views = searchViews) }
+        setState { copy(views = getDetailViews(searchResult)) }
     }
 
 
