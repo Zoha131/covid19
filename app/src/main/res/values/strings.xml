@@ -22,4 +22,15 @@
     <string name="opps">Opps...</string>
     <string name="somethingWrong">Something went wrong. Please make sure you have working network connection.</string>
     <string name="search">Search by country name</string>
+    <string name="total_cases">Total Cases</string>
+    <string name="deaths">Deaths</string>
+    <string name="today_deaths">Today Deaths</string>
+    <string name="recovered">Recovered</string>
+    <string name="active_cases">Active Cases</string>
+    <string name="critical_cases">Critical Cases</string>
+    <string name="cases_per_one_million">Cases Per One Million</string>
+    <string name="deaths_per_one_million">Deaths Per One Million</string>
+    <string name="add_to_home">Add to Home</string>
+    <string name="hide">Hide</string>
+    <string name="today_cases">Today Cases</string>
 </resources>

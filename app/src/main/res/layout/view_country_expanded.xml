@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/name_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:textAppearance="@style/TextAppearance.CoronaNews.EditTitle"
+        android:textColor="@color/txtWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Bosnia and Herzegovina" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_country" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#D5D5D5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chart" />
+
+    <TextView
+        android:id="@+id/total_case"
+        style="@style/Style.CoronaComponent.CountryView.Expanded.Label"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/total_cases"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <TextView
+        android:id="@+id/total_case_digit"
+        style="@style/Style.CoronaComponent.CountryView.Expanded.Digit"
+        android:layout_marginEnd="24dp"
+        android:textAppearance="@style/TextAppearance.CoronaNews.EditTitle"
+        android:textColor="@color/totalColor"
+        app:layout_constraintBottom_toBottomOf="@+id/total_case"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/total_case"
+        tools:text="345,456,454" />
+
+    <View
+        android:id="@+id/view3"
+        style="@style/Style.CoronaComponent.CountryView.Expanded.Divider"
+        app:layout_constraintEnd_toEndOf="@+id/total_case_digit"
+        app:layout_constraintStart_toStartOf="@+id/total_case"
+        app:layout_constraintTop_toBottomOf="@+id/total_case" />
+
+    <TextView
+        android:id="@+id/today_cases"
+        style="@style/Style.CoronaComponent.CountryView.Expanded.Label"
+        android:text="@string/today_cases"
+        app:layout_constraintStart_toStartOf="@+id/total_case"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+    <TextView
+        android:id="@+id/today_cases_digit"
+        style="@style/Style.CoronaComponent.CountryView.Expanded.Digit"
+        android:textColor="@color/totalColor"
+        app:layout_constraintBottom_toBottomOf="@+id/today_cases"
+        app:layout_constraintEnd_toEndOf="@+id/total_case_digit"
+        app:layout_constraintTop_toTopOf="@+id/today_cases"
+        tools:text="345,456,454" />
+
+    <View
+        android:id="@+id/view4"
+        style="@style/Style.CoronaComponent.CountryView.Expanded.Divider"
+        app:layout_constraintEnd_toEndOf="@+id/today_cases_digit"
+        app:layout_constraintStart_toStartOf="@+id/today_cases"
+        app:layout_constraintTop_toBottomOf="@+id/today_cases" />
+
+    <TextView
+        android:id="@+id/death"
+        style="@style/Style.CoronaComponent.CountryView.Expanded.Label"
+        android:text="@string/deaths"
+        app:layout_constraintStart_toStartOf="@+id/total_case"
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+    <TextView
+        android:id="@+id/death_digit"
+        style="@style/Style.CoronaComponent.CountryView.Expanded.Digit"
+        android:textAppearance="@style/TextAppearance.CoronaNews.EditTitle"
+        android:textColor="@color/deathColor"
+        app:layout_constraintBottom_toBottomOf="@+id/death"
+        app:layout_constraintEnd_toEndOf="@+id/total_case_digit"
+        app:layout_constraintTop_toTopOf="@+id/death"
+        tools:text="345,456,454" />
+
+    <View
+        android:id="@+id/view5"
+        style="@style/Style.CoronaComponent.CountryView.Expanded.Divider"
+        app:layout_constraintEnd_toEndOf="@+id/death_digit"
+        app:layout_constraintStart_toStartOf="@+id/death"
+        app:layout_constraintTop_toBottomOf="@+id/death" />
+
+    <TextView
+        android:id="@+id/today_deaths"
+        style="@style/Style.CoronaComponent.CountryView.Expanded.Label"
+        android:text="@string/today_deaths"
+        app:layout_constraintStart_toStartOf="@+id/total_case"
+        app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+    <TextView
+        android:id="@+id/today_deaths_digit"
+        style="@style/Style.CoronaComponent.CountryView.Expanded.Digit"
+        android:textColor="@color/deathColor"
+        app:layout_constraintBottom_toBottomOf="@+id/today_deaths"
+        app:layout_constraintEnd_toEndOf="@+id/total_case_digit"
+        app:layout_constraintTop_toTopOf="@+id/today_deaths"
+        tools:text="345,456,454" />
+
+    <View
+        android:id="@+id/view6"
+        style="@style/Style.CoronaComponent.CountryView.Expanded.Divider"
+        app:layout_constraintEnd_toEndOf="@+id/today_deaths_digit"
+        app:layout_constraintStart_toStartOf="@+id/today_deaths"
+        app:layout_constraintTop_toBottomOf="@+id/today_deaths" />
+
+    <TextView
+        android:id="@+id/recover"
+        style="@style/Style.CoronaComponent.CountryView.Expanded.Label"
+        android:text="@string/recovered"
+        app:layout_constraintStart_toStartOf="@+id/total_case"
+        app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+    <TextView
+        android:id="@+id/recover_digit"
+        style="@style/Style.CoronaComponent.CountryView.Expanded.Digit"
+        android:textAppearance="@style/TextAppearance.CoronaNews.EditTitle"
+        android:textColor="@color/recoveredColor"
+        app:layout_constraintBottom_toBottomOf="@+id/recover"
+        app:layout_constraintEnd_toEndOf="@+id/total_case_digit"
+        app:layout_constraintTop_toTopOf="@+id/recover"
+        tools:text="345,456,454" />
+
+    <View
+        android:id="@+id/view7"
+        style="@style/Style.CoronaComponent.CountryView.Expanded.Divider"
+
+        app:layout_constraintEnd_toEndOf="@+id/recover_digit"
+        app:layout_constraintStart_toStartOf="@+id/recover"
+        app:layout_constraintTop_toBottomOf="@+id/recover" />
+
+    <TextView
+        android:id="@+id/active_case"
+        style="@style/Style.CoronaComponent.CountryView.Expanded.Label"
+        android:text="@string/active_cases"
+        app:layout_constraintStart_toStartOf="@+id/total_case"
+        app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+    <TextView
+        android:id="@+id/active_case_digit"
+        style="@style/Style.CoronaComponent.CountryView.Expanded.Digit"
+        app:layout_constraintBottom_toBottomOf="@+id/active_case"
+        app:layout_constraintEnd_toEndOf="@+id/total_case_digit"
+        app:layout_constraintTop_toTopOf="@+id/active_case"
+        tools:text="345,456,454" />
+
+    <View
+        android:id="@+id/view8"
+        style="@style/Style.CoronaComponent.CountryView.Expanded.Divider"
+        app:layout_constraintEnd_toEndOf="@+id/active_case_digit"
+        app:layout_constraintStart_toStartOf="@+id/active_case"
+        app:layout_constraintTop_toBottomOf="@+id/active_case" />
+
+
+    <TextView
+        android:id="@+id/critical_case"
+        style="@style/Style.CoronaComponent.CountryView.Expanded.Label"
+        android:text="@string/critical_cases"
+        app:layout_constraintStart_toStartOf="@+id/total_case"
+        app:layout_constraintTop_toBottomOf="@+id/view8" />
+
+    <TextView
+        android:id="@+id/critical_case_digit"
+        style="@style/Style.CoronaComponent.CountryView.Expanded.Digit"
+        app:layout_constraintBottom_toBottomOf="@+id/critical_case"
+        app:layout_constraintEnd_toEndOf="@+id/total_case_digit"
+        app:layout_constraintTop_toTopOf="@+id/critical_case"
+        tools:text="345,456,454" />
+
+    <View
+        android:id="@+id/view9"
+        style="@style/Style.CoronaComponent.CountryView.Expanded.Divider"
+        app:layout_constraintEnd_toEndOf="@+id/critical_case_digit"
+        app:layout_constraintStart_toStartOf="@+id/critical_case"
+        app:layout_constraintTop_toBottomOf="@+id/critical_case" />
+
+    <TextView
+        android:id="@+id/case_million"
+        style="@style/Style.CoronaComponent.CountryView.Expanded.Label"
+        android:text="@string/cases_per_one_million"
+        app:layout_constraintStart_toStartOf="@+id/total_case"
+        app:layout_constraintTop_toBottomOf="@+id/view9" />
+
+    <TextView
+        android:id="@+id/case_million_digit"
+        style="@style/Style.CoronaComponent.CountryView.Expanded.Digit"
+        app:layout_constraintBottom_toBottomOf="@+id/case_million"
+        app:layout_constraintEnd_toEndOf="@+id/total_case_digit"
+        app:layout_constraintTop_toTopOf="@+id/case_million"
+        tools:text="345,456,454" />
+
+    <View
+        android:id="@+id/view10"
+        style="@style/Style.CoronaComponent.CountryView.Expanded.Divider"
+        app:layout_constraintEnd_toEndOf="@+id/case_million_digit"
+        app:layout_constraintStart_toStartOf="@+id/case_million"
+        app:layout_constraintTop_toBottomOf="@+id/case_million" />
+
+    <TextView
+        android:id="@+id/death_million"
+        style="@style/Style.CoronaComponent.CountryView.Expanded.Label"
+        android:text="@string/deaths_per_one_million"
+        app:layout_constraintStart_toStartOf="@+id/total_case"
+        app:layout_constraintTop_toBottomOf="@+id/view10" />
+
+    <TextView
+        android:id="@+id/death_million_digit"
+        style="@style/Style.CoronaComponent.CountryView.Expanded.Digit"
+        app:layout_constraintBottom_toBottomOf="@+id/death_million"
+        app:layout_constraintEnd_toEndOf="@+id/total_case_digit"
+        app:layout_constraintTop_toTopOf="@+id/death_million"
+        tools:text="345,456,454" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButton"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/hide"
+        android:textAllCaps="false"
+        android:textColor="@color/textPrimary"
+        app:cornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/materialButton2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/death_million"
+        app:strokeColor="@color/colorPrimary" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/add_to_home"
+        android:textAllCaps="false"
+        android:textColor="@color/textAccent"
+        app:cornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/materialButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/materialButton"
+        app:layout_constraintTop_toTopOf="@+id/materialButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

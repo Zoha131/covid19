@@ -6,4 +6,6 @@
     <dimen name="world_stroke">1.5dp</dimen>
     <dimen name="world_btn_height">40dp</dimen>
     <dimen name="wold_margin_bottom">16dp</dimen>
+    <dimen name="country_expand_unit_vertical_margin">8dp</dimen>
+    <dimen name="country_expand_divider_margin">2dp</dimen>
 </resources>
