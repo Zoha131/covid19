@@ -8,13 +8,4 @@
         android:id="@+id/navigation_globe"
         android:icon="@drawable/globe"
         android:title="@string/all_country" />
-    <item
-        android:id="@+id/navigation_news"
-        android:icon="@drawable/news"
-        android:title="@string/news" />
-
-    <item
-    android:id="@+id/navigation_more"
-    android:icon="@drawable/more"
-    android:title="@string/more" />
 </menu>
