@@ -5,19 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+    <ImageView
+        android:id="@+id/flagImage"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/name_country"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/name_country" />
+
     <TextView
         android:id="@+id/name_country"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
+        android:layout_marginHorizontal="8dp"
         android:layout_marginTop="16dp"
         android:textAppearance="@style/TextAppearance.CoronaNews.EditTitle"
         android:textColor="@color/txtWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/flagImage"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Bosnia and Herzegovina" />
+
+    <TextView
+        android:id="@+id/chart_label"
+        style="@style/Style.CoronaComponent.CountryView.Expanded.Digit"
+        android:text="@string/new_cases_trend"
+        android:textColor="@color/textPrimary"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/chart"
+        app:layout_constraintEnd_toEndOf="@+id/chart"
+        app:layout_constraintStart_toStartOf="@+id/chart"
+        app:layout_constraintTop_toTopOf="@+id/chart" />
 
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/chart"
@@ -31,8 +51,8 @@
     <View
         android:id="@+id/view2"
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="#D5D5D5"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chart" />

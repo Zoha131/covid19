@@ -19,6 +19,7 @@ package com.conceptgang.coronanews.model
 
 data class CountryData(
     val country: String,
+    val flag: String,
     val cases: Int,
     val todayCases: Int,
     val deaths: Int,

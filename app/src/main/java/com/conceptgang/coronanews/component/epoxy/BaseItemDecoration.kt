@@ -59,7 +59,7 @@ class BaseItemDecoration: RecyclerView.ItemDecoration(){
 
             val child = parent.getChildAt(i)
             val j = parent.getChildAdapterPosition(child)
-            if(j < 0) break
+            if(j < 0 || j>= views.size) break
             val epoxyData = views[j].epoxyData
 
 

@@ -31,4 +31,5 @@
     <string name="add_to_home">Add to Home</string>
     <string name="hide">Hide</string>
     <string name="today_cases">Today Cases</string>
+    <string name="new_cases_trend">New Cases Trend</string>
 </resources>
