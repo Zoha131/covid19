@@ -10,7 +10,4 @@
 
 <img src="./graphic/Google%20Pixel%203%201.png" width="200">
 <img src="./graphic/Google%20Pixel%203%202.png" width="200">
-<img src="./graphic/Google%20Pixel%203%203.png" width="200">
-<img src="./graphic/Google%20Pixel%203%204.png" width="200">
-<img src="./graphic/Google%20Pixel%203%205.png" width="200">
 
